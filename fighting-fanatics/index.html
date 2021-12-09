@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="assets/css/main.css"/>
+    <script src="assets/js/classes.js"></script>
+    <script src="assets/js/main.js"></script>
+    <!--  https://github.com/goldfire/howler.js EXTERNAL-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/howler/2.2.1/howler.min.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fighting Fanatics</title>
+</head>
+<body>
+    <article>
+        <div id="hp"> <div id="player_hp">Player HP: 150</div> <div id="turn">Turn: 1</div> </div>
+        <br/>
+        <div id="enemy_image">
+            <div id="enemy_image1" class="enemy"></div><div id="enemy_image2" class="enemy"></div><div id="enemy_image3" class="enemy"></div>
+            <div id="enemy_image4" class="enemy"></div><div id="enemy_image5" class="enemy"></div><div id="enemy_image6" class="enemy"></div>
+            <div id="enemy_image7" class="enemy"></div><div id="enemy_image8" class="enemy"></div><div id="enemy_image9" class="enemy"></div>
+        </div>
+        <div id="controls">
+            <div><button id="fight"><img src="assets/fight.png" alt="fight"/></button></div>
+            <div><button id="heal"><img src="assets/heal.png" alt="heal"/></button></div>
+            <div><button id="run"><img src="assets/run.png" alt="run"/></button></div>
+        </div>
+    </article>
+    <br/>
+    <section>
+        <h2>How to Play</h2><br/>
+        When there is an enemy on screen, press fight to hit that enemy. If there are multiple, then it will hit in reading order (top left to bottom right).<br/>
+        If you are low on HP or have no enemies, heal to recover HP. There's no limit!<br/>
+        Running will lose all progress and you will start back on turn 1.<br/>
+        When you defeat an enemy, you will gain stats!
+    </section>
+    <br/>
+    <footer>
+        <a href="https://github.com/JayHors/fighting-fanatics">GitHub repo</a><br/>
+        <a href="docs.html">Documentation</a>
+    </footer>
+</body>
+</html>
