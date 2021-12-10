@@ -1,10 +1,11 @@
+import brandUrl from '../img/JH.png';
 const template = document.createElement("template");
 template.innerHTML = `
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
     <nav class="navbar is-fixed-top is-dark">
     <div class="navbar-brand">
         <a class="navbar-item" href="./">
-            
+            <img src="${brandUrl}" alt="JH logo"></img>
         </a>
         <a role="button" class="navbar-burger " aria-label="menu" aria-expanded="false"
             data-target="navbarBasicExample">

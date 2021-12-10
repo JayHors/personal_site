@@ -9,7 +9,7 @@ const cam = new threed.PerspectiveCamera(90, window.innerWidth / window.innerHei
 
 const render = new threed.WebGLRenderer({ canvas: document.querySelector('#bg') });
 render.setPixelRatio(window.devicePixelRatio);
-render.setSize(window.innerWidth, window.innerHeight);
+render.setSize(window.innerWidth * 1.25, window.innerHeight * 1.25);
 cam.position.setZ(5);
 
 
@@ -28,12 +28,50 @@ function addCube() {
     return meshy;
 }
 
-let boxArray = Array.from({length: 100}, addCube);
+let boxArray = Array.from({ length: 200 }, addCube);
 
 console.log(boxArray);
 function animate() {
     requestAnimationFrame(animate);
-    boxArray.forEach((cubey)=> {cubey.rotation.x += .01;});
+    boxArray.forEach((cubey, indexed) => {
+        switch (indexed % 9) {
+            case 0:
+                cubey.rotation.x += 0.01;
+                break;
+            case 1:
+                cubey.rotation.y += 0.01;
+                break;
+            case 2:
+                cubey.rotation.z += 0.01;
+                break;
+            case 3:
+                cubey.rotation.x += 0.01;
+                cubey.rotation.z += 0.01;
+                break;
+            case 4:
+                cubey.rotation.y += 0.01;
+                cubey.rotation.x -= 0.01;
+                break;
+            case 5:
+                cubey.rotation.y += 0.01;
+                cubey.rotation.z += 0.01;
+                break;
+            case 6:
+                cubey.rotation.x += 0.01;
+                cubey.rotation.y += 0.01;
+                cubey.rotation.z += 0.01;
+                break;
+            case 7:
+                cubey.rotation.x -= 0.01;
+                cubey.rotation.y -= 0.01;
+                cubey.rotation.z -= 0.01;
+                break;
+            case 8:
+                cubey.rotation.x += 0.05;
+                break;
+
+        }
+    });
     render.render(scene, cam);
 }
 
