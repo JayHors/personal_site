@@ -29,6 +29,12 @@ template.innerHTML = `
 
             <hr class="navbar-divider">
 
+            <a class="navbar-item is-tab " id="workNav" href="./work.html">
+                Work
+            </a>
+
+            <hr class="navbar-divider">
+
             <a class="navbar-item is-tab " id="contactNav" href="./contact.html">
                 Contact
             </a>
