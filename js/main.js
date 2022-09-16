@@ -4,7 +4,7 @@ import * as threed from 'three';
 import { SiteNav } from './site-nav.js';
 
 
-//TODO add LinkedIn, rm Instagram, add GitHub to Contact
+//TODO add LinkedIn, rm Instagram, add GitHub to Contact page, change colors on buttons (Allie, Dennis, Sam)
 
 const scene = new threed.Scene();
 const cam = new threed.PerspectiveCamera(90, window.innerWidth / window.innerHeight, 0.1, 1000);
