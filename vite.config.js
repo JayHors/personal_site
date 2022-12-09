@@ -9,6 +9,7 @@ module.exports = defineConfig({
         projects: resolve(__dirname, 'projects.html'),
         contact: resolve(__dirname, 'contact.html'),
         work: resolve(__dirname, 'work.html'),
+        proj3about: resolve(__dirname, 'proj3about.html')
       }
     }
   }

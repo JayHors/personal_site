@@ -11,6 +11,7 @@
     <h2>About this Project</h2>
     <p>This app allows you to browse cards throughout the history of the Pokemon Trading Card Game. You will be able to save future cards, too!</p>
     <p>It makes use of the Pokemon TCG API, <a href="https://pokemontcg.io/">avaiable here</a>. It grabs the sets from there, as well as using a driver for Dart found in the documentation. </p>
+    <p>My implementation of multiple routes allows this application to work as-is until the API itself is shut down with updates. This is because the list of sets to search is dynamically loaded. </p>
     <p>I am proud of my robust usage of sharedPreferences here to both store the last set searched, as well as storing the collection.</p>
     <p>I wish I could properly search the API, but by the time I had gotten to the point where I was looking to granulate my search, I discovered that the Dart driver doesn't currently allow for it. (If you look into my search page widget, you can even see that I had it mostly implemented!)</p>
     <p>While it isn't reviewed and merged in time for the submission deadline, I did start work on updating the Dart driver to allow for this type of thing <a href="https://github.com/PokemonTCG/pokemon-tcg-sdk-dart/pull/8">here.</a></p>
