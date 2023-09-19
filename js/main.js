@@ -4,7 +4,7 @@ import * as threed from 'three';
 import { SiteNav } from './site-nav.js';
 
 
-//TODO add LinkedIn, rm Instagram, add GitHub to Contact page, change colors on buttons (Allie, Dennis, Sam)
+
 
 const scene = new threed.Scene();
 const cam = new threed.PerspectiveCamera(90, window.innerWidth / window.innerHeight, 0.1, 1000);
@@ -18,7 +18,7 @@ cam.position.setZ(5);
 
 function addCube() {
     const cubey = new threed.BoxGeometry(.5, .5, .5);
-    const greeny = new threed.MeshBasicMaterial({ color: 0x33DD33, wireframe: true });
+    const greeny = new threed.MeshBasicMaterial({ color: 0xDD3333, wireframe: true });
     const meshy = new threed.Mesh(cubey, greeny);
 
     const [x, y, z] = Array(3).fill().map(() => threed.MathUtils.randFloatSpread(50));
