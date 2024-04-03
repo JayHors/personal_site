@@ -3,6 +3,7 @@
 
 :root {
     overflow-x: hidden;
+    background-color: black;
 }
 
 @media only screen and (min-width: 768px){
