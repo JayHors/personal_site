@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TDF Parsing Tool</title>
+</head>
+<body>
+    <style>
+        *{
+            background-color: black;
+            color: white;
+        }
+    </style>
+    <input type="file" name="selected_tdf" id="selected_tdf" accept=".tdf">
+    <input type="button" value="Process" id="process-btn">
+    <div class="player-table">
+        <table id="players">
+            <tr>
+                <th>Player ID</th>
+                <th>First name</th>
+                <th>Last name</th>
+                <th>Year of Birth</th>
+            </tr>
+        </table>
+    </div>
+    <script src="main.js"></script>
+</body>
+</html>
