@@ -18,12 +18,11 @@ processBtn.addEventListener("click", () => {
     }
     else {
         const urlObj = window.URL.createObjectURL(filePicker.files[0]);
-        processAndDisplayTDF(urlObj);
+        processTDF(urlObj);
     }
 });
 
-
-function processAndDisplayTDF(urlObj) {
+function processTDF(urlObj) {
     playersArr = [];
     fetch(urlObj.toString())
         .then((response) => response.text())
@@ -43,16 +42,26 @@ function processAndDisplayTDF(urlObj) {
             }
         })
         .then(() => {
-            const playerTable = document.querySelector('#players');
-            playerTable.innerHTML = `<tr>
+            displayTDF();
+        });
+}
+
+
+function removePlayer(index){
+    playersArr.splice(index, 1);
+    displayTDF();
+}
+
+function displayTDF() {
+    const playerTable = document.querySelector('#players');
+    playerTable.innerHTML = `<tr>
                 <th>Player ID</th>
                 <th>First name</th>
                 <th>Last name</th>
                 <th>Year of Birth</th>
+                <th>Remove from list</th>
             </tr>`;
-            playersArr.forEach((player) => {
-                playerTable.innerHTML += `<tr><td>${player.playerid}</td><td>${player.first}</td><td>${player.last}</td><td>${player.dob}</td></tr>`;
-            })
-        });
+    playersArr.forEach((player, index) => {
+        playerTable.innerHTML += `<tr><td>${player.playerid}</td><td>${player.first}</td><td>${player.last}</td><td>${player.dob}</td><td><button type="button" onclick="removePlayer(${index})">Remove</button></td></tr>`;
+    })
 }
-
