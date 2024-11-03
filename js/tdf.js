@@ -9,18 +9,23 @@ class playerObj {
 
 let playersArr = [];
 
-const processBtn = document.querySelector('#process-btn');
 
-processBtn.addEventListener("click", () => {
-    const filePicker = document.getElementById("selected_tdf");
-    if (!filePicker.files[0]) {
-        alert("Please select a file.");
-    }
-    else {
-        const urlObj = window.URL.createObjectURL(filePicker.files[0]);
-        processTDF(urlObj);
-    }
-});
+window.onload = () =>{
+    const processBtn = document.querySelector('#process-btn');
+    processBtn.addEventListener("click", () => {
+        const filePicker = document.getElementById("selected_tdf");
+        if (!filePicker.files[0]) {
+            alert("Please select a file.");
+        }
+        else {
+            const urlObj = window.URL.createObjectURL(filePicker.files[0]);
+            processTDF(urlObj);
+        }
+    });
+}
+
+window.removePlayer = removePlayer;
+
 
 function processTDF(urlObj) {
     playersArr = [];
