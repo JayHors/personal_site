@@ -35,3 +35,8 @@ a {
 p {
     background-color: black;
 }
+
+a.inline-link {
+    color: maroon;
+    text-decoration: underline;
+}
